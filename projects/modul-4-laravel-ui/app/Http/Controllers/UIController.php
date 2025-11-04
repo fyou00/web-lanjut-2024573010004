@@ -21,14 +21,9 @@ class UIController extends Controller
         $theme = session('theme', 'light');
         $alertMessage = 'Halaman ini menggunakan Partial Views!';
         $team = [
-            ['name' => 'Hayzar Muhaiyar', 'role' => 'Full Stack Developer'],
-            ['name' => 'Hamizan Putra Zulia', 'role' => 'Game Developer'],
-            ['name' => 'Hafidz Maulana', 'role' => 'Backend Developer'],
-            ['name' => 'Firdhila Ananda Syahputri', 'role' => 'UI/UX Designer'],
-            ['name' => 'Maisha Zahrani', 'role' => 'Product Manager'],
-            ['name' => 'Bunga Alfa Zahra', 'role' => 'QA Engineer'],
-            ['name' => 'Deva', 'role' => 'DevOps Engineer'],
-            ['name' => 'Faqriadi Andika', 'role' => 'Project Lead']
+            ['name' => 'Muhammad Fathurrahman', 'role' => 'Mobile Developer'],
+            ['name' => 'Maila Aziza', 'role' => 'Frontend Developer'],
+            ['name' => 'User2', 'role' => 'UI/UX Designer'],
         ];
         return view('about', compact('theme', 'alertMessage', 'team'));
     }
@@ -47,9 +42,9 @@ class UIController extends Controller
     {
         $theme = session('theme', 'light');
         $user = [
-            'name' => 'Ejarr',
-            'email' => 'Ejarr@example.com',
-            'join_date' => '2024-01-15',
+            'name' => 'Fathur',
+            'email' => 'fathur231@gmail.com',
+            'join_date' => '2024-05-27',
             'preferences' => ['Email Notifications', 'Dark Mode', 'Newsletter']
         ];
         return view('profile', compact('theme', 'user'));
