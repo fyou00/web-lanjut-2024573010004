@@ -1,1 +1,0 @@
-mkdir resources/views/product

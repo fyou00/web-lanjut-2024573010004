@@ -15,7 +15,7 @@
                 <div class="card {{ $theme === 'dark' ? 'bg-dark border-light' : '' }} text-center">
                     <div class="card-body">
                         <div class="mb-3">
-                            <span class="fs-1">👤</span>
+                            <span class="fs-1">👨</span>
                         </div>
                         <h4>{{ $user['name'] }}</h4>
                         <p class="text-muted">{{ $user['email'] }}</p>

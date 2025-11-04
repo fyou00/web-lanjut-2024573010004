@@ -26,7 +26,7 @@
                         
                         <h6 class="mt-4">Department Tersedia:</h6>
                         <ul>
-                            @foreach($departments as $dept)
+                            @foreach( $departments as $dept)
                             <li>{{ $dept }}</li>
                             @endforeach
                         </ul>
