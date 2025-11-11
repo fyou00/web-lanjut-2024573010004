@@ -11,3 +11,5 @@ Route::get('/', function () {
 
 Route::get('/dasar', [DasarBladeController::class, 'showData']);
 Route::get('/logic', [LogicController::class, 'show']);
+Route::get('/admin', [PageController::class, 'admin']);
+Route::get('/user', [PageController::class, 'user']);
