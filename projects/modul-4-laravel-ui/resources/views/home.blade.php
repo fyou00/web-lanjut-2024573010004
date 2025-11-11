@@ -1,7 +1,5 @@
 @extends('layouts.app')
-
 @section('title', 'Home - Integrated Demo')
-
 @section('content')
 <div class="row">
     <div class="col-12">
@@ -12,29 +10,29 @@
             <div class="row mt-5">
                 <div class="col-md-4 mb-4">
                     <x-feature-card 
+                    :theme="$theme"
                         title="Partial Views"
                         icon="📁"
                         description="Gunakan @include untuk reusable UI components dengan data sederhana."
                         badge="Latihan 13"
-                        :theme="$theme"
                     />
                 </div>
                 <div class="col-md-4 mb-4">
                     <x-feature-card 
+                    :theme="$theme"
                         title="Blade Components" 
                         icon="🧩"
                         description="Komponen Blade dengan props dan slots untuk UI yang lebih kompleks."
                         badge="Latihan 14"
-                        :theme="$theme"
                     />
                 </div>
                 <div class="col-md-4 mb-4">
                     <x-feature-card 
+                    :theme="$theme"
                         title="Theme Switching"
                         icon="🎨"
                         description="Toggle antara light dan dark mode dengan session persistence."
                         badge="Latihan 15"
-                        :theme="$theme"
                     />
                 </div>
             </div>

@@ -1,3 +1,9 @@
+@php
+    $theme = $theme ?? 'light';
+    $title = $title ?? '';
+    $description = $description ?? '';
+    $icon = $icon ?? '⭐';
+@endphp
 <div class="card feature-card h-100 {{ $theme === 'dark' ? 'bg-secondary text-white' : '' }}">
     <div class="card-body">
         <div class="d-flex align-items-center mb-3">

@@ -1,3 +1,5 @@
+@props(['theme' => 'light', 'departments' => []])
+
 <div class="card {{ $theme === 'dark' ? 'bg-dark border-light' : '' }} h-100">
     <div class="card-header">
         <h5>Form Kontak</h5>
