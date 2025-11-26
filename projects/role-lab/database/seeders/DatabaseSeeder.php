@@ -1,6 +1,7 @@
 <?php
 
 namespace Database\Seeders;
+use Illuminate\Support\Facades\Hash;
 
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -10,16 +11,27 @@ class DatabaseSeeder extends Seeder
 {
     use WithoutModelEvents;
 
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
-    {
-        // User::factory(10)->create();
+{
+    User::create([
+        'name' => 'Admin User',
+        'email' => 'admin@ilmudata.id',
+        'password' => Hash::make('password123'),
+        'role' => 'admin',
+    ]);
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
-    }
+    User::create([
+        'name' => 'Manager User',
+        'email' => 'manager@ilmudata.id',
+        'password' => Hash::make('password123'),
+        'role' => 'manager',
+    ]);
+
+    User::create([
+        'name' => 'General User',
+        'email' => 'user@ilmudata.id',
+        'password' => Hash::make('password123'),
+        'role' => 'user',
+    ]);
+}
 }
