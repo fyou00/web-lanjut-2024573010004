@@ -243,11 +243,22 @@ Tuliskan langkah-langkah yang sudah dilakukan, sertakan potongan kode dan screen
     ```
     Kemudian tekan send, maka hasilnya bisa dilihat pada bagian bawah datanya sudah berhasil diinsert ke dalam database.
     ![postman](gambar/postman_create.png)
+  
+-   Fungsi update()
+    Fungsi update digunakan untuk memperbarui data yang ada di database. Laravel dapat menangani dua jenis HTTP method untuk pembaruan, yaitu PUT dan PATCH. Keduanya berfungsi untuk mengubah data, tetapi PUT mengganti seluruh data yang ada sehingga semua field perlu dikirim ulang. Berbeda dengan PATCH yang digunakan untuk mengubah sebagian sehingga hanya field yang diubah yang akan dikirim. Contoh kita ingin mengupdate data dengan id 4:
+    ![postman](gambar/postman_update.png)
+  
+-   Fungsi delete()
+    Konsep endpoint pada proses delete sama persis dengan proses update data, yakni menggunakan parameter id product. Perbedaannya terletak pada metode yang digunakan. Jika dalam proses update data produk kita menggunakan metode PUT, maka dalam proses hapus data kita bisa menggunakan metode DELETE.
+    ![postman](gambar/postman_delete.png)
+    Bisa dilihat dari gambar dibawah berikut data sudah berhasil terhapus
+    ![postman](gambar/postman_delete_show.png)
+
 ---
 
 ## 3. Kesimpulan
 
-lorem
+Praktikum ini memberikan pemahaman menyeluruh tentang cara membangun sistem autentikasi dan otorisasi yang aman di Laravel. Melalui Laravel Breeze, mahasigma mempelajari proses pendaftaran, login, manajemen profil, serta bagaimana menjaga keamanan akses menggunakan middleware. Penerapan role seperti admin, manager, dan user membantu menunjukkan bagaimana setiap mahasigma dapat memiliki hak akses yang berbeda sesuai kebutuhannya. Selain itu, pembuatan fitur API seperti model, request, resource, collection, hingga controller memperkenalkan konsep CRUD yang terstruktur dan aman, termasuk validasi data, pengelolaan respons JSON, dan penggunaan HTTP method yang tepat. Secara keseluruhan, modul ini berhasil memberikan dasar kuat untuk memahami mekanisme security access, sehingga mahasigma dapat membangun aplikasi Laravel yang lebih aman, terorganisir, dan siap digunakan di lingkungan produksi.
 
 ---
 
@@ -255,5 +266,7 @@ lorem
 
 Cantumkan sumber yang Anda baca (buku, artikel, dokumentasi) — minimal 2 sumber. Gunakan format sederhana (judul — URL).
 
-Laravel Blade Templating Engine — https://hackmd.io/@mohdrzu/r1AIUzWpll
+Tutorial Laravel 12 RESTful API — https://lagikoding.com/episode/tutorial-laravel-12-restful-api-1-install-laravel-12
+Tutorial Laravel Rest API Untuk Pemula — https://www.rumahweb.com/journal/tutorial-laravel-rest-api/
+
 ---
