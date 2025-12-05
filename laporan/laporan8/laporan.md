@@ -46,9 +46,9 @@ Tuliskan langkah-langkah yang sudah dilakukan, sertakan potongan kode dan screen
     `  php artisan breeze:install`
     Install dependency frontend:
     `bash
-npm install
-npm run dev
-`
+    npm install
+    npm run dev
+    `
 -   Membuat Rute Profil yang Dilindungi
     Buka web.php:
 
@@ -88,9 +88,9 @@ npm run dev
 
 Screenshot Hasil:
 
-// isi gambar screenshot
-// isi gambar screenshot
-// isi gambar screenshot
+Saat user sudah login, halaman akan menampilkan hasil seperti pada gambar berikut:
+![auth-lab](gambar/auth-lab-1.png)
+Sedangkan jika pengguna belum login, akses ke endpoint akan ditolak dan otomatis diarahkan ke halaman login.
 
 2.2 Praktikum 2 – Membatasi Akses Berdasarkan Peran di Laravel 12
 
@@ -144,7 +144,7 @@ npm run dev
     Kemudian jalankan `php artisan migrate` untuk update database, dan kini kolom role pasti sudah ada dalam table `users`
 
 -   Seeding User dengan Role Berbeda
-    Edit `database/seeders/DatabaseSeeder.php`:
+    Untuk memasukkan informasi login user maka edit file `database/seeders/DatabaseSeeder.php` kemudian tambahkan beberapa akun sebagai berikut:
 
     ```bash
     User::create([
@@ -341,11 +341,17 @@ npm run dev
       /user
       /all
 
-Screenshot Hasil:\
-// hasil\
-// hasil\
-// hasil\
-// hasil
+Screenshot Hasil:
+Berikut adalah beberapa kondisi yang terjadi selama proses autentikasi.
+- Admin mengakses halaman admin
+![role-lab](gambar/role-lab-1.png)
+
+- Admin mengakses halaman all
+![role-lab](gambar/role-lab-all.png)
+![role-lab](gambar/role-lab-all.png)
+
+- Admin mengakses halaman manager
+![role-lab](gambar/role-lab-rejected.png)
 
 ---
 
@@ -364,3 +370,9 @@ Panduan Lengkap Authorization di Laravel 12 — https://qadrlabs.com/post/larave
 Membuat Autentikasi (Multi Role) Web Laravel Anti Ribet dengan Laravel Breeze — https://wahyuivan.medium.com/membuat-autentikasi-multi-role-web-laravel-anti-ribet-dengan-laravel-breeze-269ad99f1197
 
 ---
+
+
+
+
+
+        
