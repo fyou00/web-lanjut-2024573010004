@@ -1,4 +1,4 @@
-# Laporan Modul 8: Authentication & Authorization
+# Laporan Modul 9: RESTful API Laravel
 
 **Mata Kuliah:** Workshop Web Lanjut  
 **Nama:** Muhammad Fathurrahman  
@@ -9,15 +9,24 @@
 
 ## Abstrak
 
-Laporan ini membahas penerapan autentikasi dan otorisasi dalam aplikasi Laravel, dimulai dari penggunaan Laravel Breeze untuk membangun fitur pendaftaran, login, pengelolaan profil, serta pembatasan hak akses menggunakan middleware.Kita dapat mempelajari cara membangun sistem login yang aman, membuat rute yang aman dari ancaman hacker, menambahkan role seperti admin, manager, dan user, serta mengelola akses setiap role secara terpisah. Secara keseluruhan, modul ini memberikan dasar lengkap untuk memahami dan menerapkan security access pada aplikasi Laravel.
+Laporan ini membahas penggunaan RESTful API pada framework Laravel, mulai dari perancangan struktur endpoint, pengelolaan resource, hingga penerapan standar HTTP seperti metode GET, POST, PUT, dan DELETE. Penjelasan mencakup proses pembuatan controller berbasis API, penggunaan route khusus API, serta pengelolaan format respons menggunakan JSON.
+
+Sebagai bagian dari pengujian, Postman digunakan untuk mencoba setiap endpoint secara langsung, memverifikasi respons, mengirim payload, serta memastikan bahwa seluruh fitur API berjalan sesuai spesifikasi. Melalui Postman, proses debugging dan validasi API dapat dilakukan lebih mudah dan terstruktur. Secara keseluruhan, modul ini memberikan pemahaman menyeluruh mengenai pembangunan layanan RESTful yang efisien, aman, dan mudah diintegrasikan dengan aplikasi lain.
 
 ---
 
 ## 1. Dasar Teori
 
-Autentikasi adalah proses verifikasi identikasi user apakah seseorang benar-benar orang yang mereka claim. Contoh saat kita ingin login ke dalam suatu web, maka sistem akan meminta username dan password. Jika cocok dengan data yang tersimpan maka boleh masuk.
+RESTful API adalah arsitektur layanan web yang menggunakan prinsip REST untuk mengatur komunikasi antara klien dan server, di mana setiap data diperlakukan sebagai resource yang diakses melalui URL menggunakan metode HTTP seperti GET, POST, PUT, dan DELETE; bersifat stateless (server tidak menyimpan informasi apa pun tentang request sebelumnya dari klien), menggunakan format respons konsisten seperti JSON, serta memudahkan integrasi dengan berbagai aplikasi karena desainnya yang sederhana dan terstruktur.
 
-Otorisasi adalah proses yang menentukan apakah seseorang boleh melakukan aksi ini atau tidak oleh pengguna yang telah terautentikasi di dalam aplikasi. Contohnya seperti user tidak bisa mengakses halaman admin.
+Cara kerja metode HTTP (GET, POST, PUT, DELETE) dalam pengelolaan resource pada RESTful API?
+- GET digunakan untuk mengambil data dari server, seperti menampilkan list atau detail data tertentu.
+- POST digunakan untuk membuat data baru di server.
+- PUT digunakan untuk memperbarui seluruh data yang sudah ada.
+- PATCH (opsional) untuk memperbarui sebagian data.
+- DELETE digunakan untuk menghapus data tertentu dari server.
+
+Pada Laravel, semua metode ini dihubungkan ke controller melalui route API sehingga setiap metode memiliki fungsi yang sesuai seperti index, store, update, dan destroy.
 
 ---
 
@@ -25,7 +34,7 @@ Otorisasi adalah proses yang menentukan apakah seseorang boleh melakukan aksi in
 
 Tuliskan langkah-langkah yang sudah dilakukan, sertakan potongan kode dan screenshot hasil.
 
-2.1 Praktikum 1 – 
+2.1 Praktikum 1 – RESTful API Laravel  12
 
 -   Buat Proyek Laravel baru bernama `laravel-api`
 -   Atur database
@@ -258,7 +267,7 @@ Tuliskan langkah-langkah yang sudah dilakukan, sertakan potongan kode dan screen
 
 ## 3. Kesimpulan
 
-Praktikum ini memberikan pemahaman menyeluruh tentang cara membangun sistem autentikasi dan otorisasi yang aman di Laravel. Melalui Laravel Breeze, mahasigma mempelajari proses pendaftaran, login, manajemen profil, serta bagaimana menjaga keamanan akses menggunakan middleware. Penerapan role seperti admin, manager, dan user membantu menunjukkan bagaimana setiap mahasigma dapat memiliki hak akses yang berbeda sesuai kebutuhannya. Selain itu, pembuatan fitur API seperti model, request, resource, collection, hingga controller memperkenalkan konsep CRUD yang terstruktur dan aman, termasuk validasi data, pengelolaan respons JSON, dan penggunaan HTTP method yang tepat. Secara keseluruhan, modul ini berhasil memberikan dasar kuat untuk memahami mekanisme security access, sehingga mahasigma dapat membangun aplikasi Laravel yang lebih aman, terorganisir, dan siap digunakan di lingkungan produksi.
+Praktikum ini memberikan pemahaman tentang penerapan RESTful API pada Laravel memberikan pemahaman yang jelas tentang bagaimana membangun layanan yang terstruktur, aman, dan mudah diakses oleh berbagai platform. Dengan memanfaatkan metode HTTP, pengelolaan resource menjadi lebih efisien dan terstandardisasi, sementara penggunaan Postman membantu memastikan setiap endpoint berfungsi sesuai kebutuhan. Konsep stateless juga membuat komunikasi antara klien dan server lebih sederhana dan fleksibel. Dengan demikian, RESTful API menjadi fondasi penting dalam pengembangan aplikasi modern yang membutuhkan integrasi antarsistem.
 
 ---
 
